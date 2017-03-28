@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Reproductor</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+    <link rel="shorcut icon" type="image/x-icon" href="fondo.jpg"/>
+    </head>
+  <body>
+    <p>Barra</p>
+
+    <div class="contenedor">
+      <progress value=0 max=tiempo(); id="barra" class="barraEstilo"></progress>
+
+    </div>
+
+    <label for="points">volumen</label>
+
+    <input onchange="sliderVol()" type="range" name="points" value="50" min="0" max="100"/>
+    <audio id="audio" src="canciones/Drake - One Dance (JustFlow Chill Bootleg) [Exclusive].mp3">
+    </audio>
+    <button type="button"  value="cargar" id="cargar" onclick="setInterval(inicio());inicio()">PlayM</button>
+    <button onclick="pausa()">Pausa</button>
+    <button onclick="alto()">Stop</button>
+    <button onclick="subir()">Vol +</button>
+    <button onclick="bajar()">Vol -</button>
+    <script src="main.js"> </script>
+  </body>
+</html>
